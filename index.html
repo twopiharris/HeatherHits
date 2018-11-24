@@ -1,0 +1,112 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>jQuery Mobile: Theme Download</title>
+	<link rel="stylesheet" href="themes/Heather.min.css" />
+	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+	<!-- main -->
+	<div data-role="page" data-theme="a" id = "main">
+		<div data-role="header" data-position="inline">
+			<h1>Heather's Hit List</h1>
+		</div>
+		<div data-role="content" data-theme = "a">
+			<button type = "button"
+					onclick = "document.location.href='#viewTasks'">
+				View Tasks
+			</button>
+			<button type = "button"
+					onclick = "document.location.href='#addTask'">
+				Add a New Task
+			</button>
+			<button type = "button"
+					onclick = "document.location.href='#pickTask'">
+				Pick a Random Task
+			</button>
+		</div>
+	</div>
+
+	<!-- view / edit tasks-->
+	<div data-role="page" data-theme="a" id = "viewTasks">
+			<div data-role="header" data-position="inline">
+				<a href = "#main">main</a>
+				<h1>View the tasks</h1>
+		  </div>
+		  <div data-role="content" data-theme = "a">
+			<table>
+				<tr>
+					<th>Task</th>
+					<th>Edit</th>
+					<th>Delete</th>		
+				</tr>
+
+				<tr>
+					<td>Take over world</td>
+					<td>
+						<button type = "button">
+							ok
+						</button>
+					</td>
+					<td>
+						<button type = "button">
+							ok
+						</button>
+					</td>
+				</tr>
+				
+			</table>
+		  </div>
+	</div>
+
+	<!-- add a task-->
+	<div data-role="page" data-theme="a" id = "addTask">
+			<div data-role="header" data-position="inline">
+				<a href = "#main">main</a>
+				<h1>Add a Task</h1>
+			</div>
+			<div data-role="content" data-theme = "a">
+				<p>
+					Add a new Task
+				</p>
+				<button type = "button">
+					Add a Task
+				</button>
+			</div>
+		</div>	
+	
+	<!-- pick a task-->
+	<div data-role="page" data-theme="a" id = "pickTask">
+		<div data-role="header" data-position="inline">
+			<a href = "#main">main</a>
+			<h1>Pick a Task</h1>
+		</div>
+		<div data-role="content" data-theme = "a">
+			<p>
+				Pick a task from random
+			</p>
+			<button type = "button">
+				Pick a Task
+			</button>
+		</div>
+	</div>	
+
+<!-- blank page
+
+	<div data-role="page" data-theme="a">
+	  	<div data-role="header" data-position="inline">
+			<h1></h1>
+		</div>
+		<div data-role="content" data-theme = "a">
+
+		</div>
+	</div>
+-->
+
+</body>
+</html>
