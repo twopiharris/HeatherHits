@@ -8,8 +8,10 @@
 	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile.structure-1.4.5.min.css" />
 	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+  <script src = "HeatherHit.js"></script>
 </head>
-<body>
+
+<body onload = "init()">
 
 	<!-- main -->
 	<div data-role="page" data-theme="a" id = "main">
@@ -18,7 +20,7 @@
 		</div>
 		<div data-role="content" data-theme = "a">
 			<button type = "button"
-					onclick = "document.location.href='#viewTasks'">
+			        onclick = "loadView()">
 				View Tasks
 			</button>
 			<button type = "button"
@@ -39,7 +41,7 @@
 				<h1>View the tasks</h1>
 		  </div>
 		  <div data-role="content" data-theme = "a">
-			<table>
+			<table id = "tblTasks">
 				<tr>
 					<th>Task</th>
 					<th>Edit</th>
@@ -50,12 +52,12 @@
 					<td>Take over world</td>
 					<td>
 						<button type = "button">
-							ok
+							edit
 						</button>
 					</td>
 					<td>
 						<button type = "button">
-							ok
+							delete
 						</button>
 					</td>
 				</tr>
