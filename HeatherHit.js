@@ -31,4 +31,11 @@ function loadView(){
 		//$("#tblTasks tbody").append("<tr><td>new thing</td><td></td></td></td></tr>");
 } // end loadView
 
+function addTask(){
+  // add a task to the list
+  newTask = $("#txtTask").val();
+  tl.push(newTask);
+  document.location.href = "#main";
+} // end addTask
+
 
