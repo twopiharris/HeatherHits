@@ -49,3 +49,8 @@ function deleteItem(itemNum){
   loadView();
 } // end deleteItem
 
+function pickRandom(){
+  var taskId = parseInt(Math.random() * tl.length);
+	$("#output").text(tl[taskId]);
+} // end pickRandom
+
