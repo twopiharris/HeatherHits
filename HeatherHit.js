@@ -17,11 +17,13 @@ function loadView(){
 	// add data from tl
   for (i = 0; i < tl.length; i++){
 		tblString = "<tr><td>" + tl[i] + "</td>\n";
-		tblString += "<td><button type = 'button'>\n";
+		tblString += "<td><button type = 'button'\n";
+		tblString += "            onclick = 'editItem(" + i + ")'>\n";
     tblString += "edit\n"
 	  tblString += "</button></td>\n";
 
-		tblString += "<td><button type = 'button'>\n";
+		tblString += "<td><button type = 'button'\n";
+		tblString += "            onclick = 'deleteItem(" + i + ")'>\n";
     tblString += "delete\n"
 	  tblString += "</button></td></tr>\n";
 
@@ -38,4 +40,12 @@ function addTask(){
   document.location.href = "#main";
 } // end addTask
 
+function editItem(itemNum){
+  console.log("editing item # " + itemNum);
+}  // end editItem
+
+function deleteItem(itemNum){
+  tl.splice(itemNum, 1);
+  loadView();
+} // end deleteItem
 
