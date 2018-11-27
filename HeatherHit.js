@@ -18,11 +18,13 @@ function loadView(){
   for (i = 0; i < tl.length; i++){
 		tblString = "<tr><td>" + tl[i] + "</td>\n";
 		tblString += "<td><button type = 'button'\n";
+		tblString += "            class = 'ui-btn'\n";
 		tblString += "            onclick = 'editItem(" + i + ")'>\n";
     tblString += "edit\n"
 	  tblString += "</button></td>\n";
 
 		tblString += "<td><button type = 'button'\n";
+		tblString += "            class = 'ui-btn'\n";
 		tblString += "            onclick = 'deleteItem(" + i + ")'>\n";
     tblString += "delete\n"
 	  tblString += "</button></td></tr>\n";
@@ -32,6 +34,11 @@ function loadView(){
 				
 		//$("#tblTasks tbody").append("<tr><td>new thing</td><td></td></td></td></tr>");
 } // end loadView
+
+function loadAdd(){
+  document.location.href = "#addTask";
+	$("#txtTask").val("");
+} // end loadAdd
 
 function addTask(){
   // add a task to the list
