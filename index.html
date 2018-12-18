@@ -4,6 +4,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Heather's Hit list</title>
 	<link rel="apple-touch-icon" href = "heather.png" />
+  <link rel="shortcut icon" sizes = "64x64" href = "heather.png" />
 	<meta name = "apple-mobile-web-app-capable" content = "yes" />
 	<link rel="stylesheet" href="themes/Heather.min.css" />
 	<link rel="stylesheet" href="themes/jquery.mobile.icons.min.css" />
@@ -79,7 +80,7 @@
 					Add a new Task
 				</p>
         <input type = "text"
-               id = "txtTask" />
+               id = "txtAddTask" />
         <button type = "button"
                 onclick = "addTask()">
 					Add Task to List
@@ -105,6 +106,28 @@
 			</p>
 		</div>
 	</div>	
+
+	<!-- edit a task-->
+	<div data-role="page" data-theme="a" id = "editTask">
+			<div data-role="header" data-position="inline">
+				<a href = "#main">main</a>
+				<h1>Edit a Task</h1>
+			</div>
+			<div data-role="content" data-theme = "a">
+				<p>
+					Edit a Task
+				</p>
+        <input type = "text"
+               id = "txtEditTask" />
+        <input type = "hidden"
+               id = "itemNum" />
+        <button type = "button"
+                onclick = "editTask()">
+				  Edit this task	
+				</button>
+			</div>
+		</div>	
+	
 
 <!-- blank page
 
